@@ -9,7 +9,7 @@ function Stopper() {
 
   useEffect(() => {
     if (flipSec) {
-      // Remove the flip class after animation completes (300ms)
+      // Remove the flip class after animation completes (100ms)
       const timeout = setTimeout(() => setFlipSec(false), 100);
       return () => clearTimeout(timeout); // Clear timeout if component unmounts or updates
     }
@@ -32,13 +32,13 @@ function Stopper() {
           if (sec === 60) {
             min += 1;
             sec = 0;
-             setFlipSec(true);
+            setFlipSec(true);
           }
 
           if (min === 60) {
             hr += 1;
             min = 0;
-             setFlipSec(true);
+            setFlipSec(true);
           }
 
           return { hr, min, sec, milli };
@@ -58,6 +58,7 @@ function Stopper() {
     setTime({ hr: 0, min: 0, sec: 0, milli: 0 });
   };
 
+
   return (
     <div className="stopper">
       <div className="timer-display">
@@ -66,7 +67,6 @@ function Stopper() {
         <span className={`seconds ${flipSec ? 'flip' : ''}`}>
           {time.sec.toString().padStart(2, '0')}
         </span>{' '}
-        {/* : <span className="milliseconds">{time.milli.toString().padStart(2, '0')}</span> */}
       </div>
 
       <div>

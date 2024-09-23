@@ -1,11 +1,42 @@
 .App {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  /* Centers horizontally */
   align-items: center;
-  /* Centers vertically */
   height: 100vh;
-  /* Full viewport height */
   text-align: center;
-  /* Center text */
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+button.dark-mode {
+  background-color: #555;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+button.dark-mode {
+  background-color: #555;
 }

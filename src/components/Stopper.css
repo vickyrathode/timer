@@ -1,6 +1,8 @@
 .stopper {
     text-align: center;
     font-family: Arial, sans-serif;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .timer-display {
@@ -11,27 +13,21 @@
     font-weight: bold;
 }
 
-
 .hours {
     color: #ff6347;
-
 }
 
 .minutes {
     color: #4682b4;
-
 }
 
 .seconds {
     color: #32cd32;
-
 }
 
 .milliseconds {
     color: #ffa500;
-
 }
-
 
 @keyframes flip {
     0% {
@@ -53,7 +49,6 @@
     display: inline-block;
     backface-visibility: hidden;
 }
-
 
 /* Button styles */
 button {
