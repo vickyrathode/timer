@@ -12,6 +12,11 @@
     margin-bottom: 20px;
     font-weight: bold;
 }
+@media (max-width: 760px) {
+    .timer-display {
+        font-size: 6rem;
+    }
+}
 
 .hours {
     color: #ff6347;
