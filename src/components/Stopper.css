@@ -1,0 +1,78 @@
+.stopper {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.timer-display {
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.hours {
+    color: #ff6347;
+
+}
+
+.minutes {
+    color: #4682b4;
+
+}
+
+.seconds {
+    color: #32cd32;
+
+}
+
+.milliseconds {
+    color: #ffa500;
+
+}
+
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0);
+    }
+
+    50% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+/* Flip animation for seconds only */
+.seconds.flip {
+    animation: flip 0.1s;
+    display: inline-block;
+    backface-visibility: hidden;
+}
+
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+}
