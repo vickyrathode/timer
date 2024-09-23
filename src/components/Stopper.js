@@ -10,7 +10,7 @@ function Stopper() {
   useEffect(() => {
     if (flipSec) {
       // Remove the flip class after animation completes (100ms)
-      const timeout = setTimeout(() => setFlipSec(false), 100);
+      const timeout = setTimeout(() => setFlipSec(false), 300);
       return () => clearTimeout(timeout); // Clear timeout if component unmounts or updates
     }
   }, [flipSec]);
@@ -23,7 +23,7 @@ function Stopper() {
           let { hr, min, sec, milli } = prevTime;
           milli += 1;
 
-          if (milli === 70) {
+          if (milli === 100) {
             sec += 1;
             milli = 0;
             setFlipSec(true); // Trigger the flip when the seconds change
